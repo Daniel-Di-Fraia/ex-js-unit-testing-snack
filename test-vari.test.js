@@ -1,4 +1,4 @@
-const { dividi, getInitials, createSlug } = require("./test-vari.js");
+const { dividi, getInitials, createSlug, average } = require("./test-vari.js");
 
 //prva jest da lezione
 test('la funzione "dividi" restituisce il quoziente tra 2 numeri', ()=> {
@@ -16,3 +16,6 @@ test("La funzione 'createSlug' restituisce una stringa in lowercase.", () => {
   });
 
 //SNACK 3
+test("La funzione 'average' calcola la media aritmetica di un array di numeri.", () => {
+    expect(average([2,3,7,8])).toBe(5);
+  });
