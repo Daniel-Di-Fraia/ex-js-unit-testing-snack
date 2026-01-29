@@ -17,7 +17,7 @@ function createSlug(stringa) {
     return stringa.toLowerCase();
 }
 
-//SNACK 3
+//SNACK 3 MEDIA DI VALORI IN ARRAY
 function average(numbers) {
     if (numbers.length === 0) return 0;
 
@@ -25,22 +25,15 @@ function average(numbers) {
     return sum / numbers.length;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+// SNACK 4
+function createSlugSpace(stringa) {
+    return stringa.toLowerCase().trim().replace(/\s+/g, "-");
+}
 
 module.exports = {
     dividi,
     getInitials,
     createSlug,
-    average
+    average,
+    createSlugSpace
 }
