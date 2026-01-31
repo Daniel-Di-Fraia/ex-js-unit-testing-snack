@@ -41,9 +41,15 @@ function isPalindrome(stringa){
 }
 
 // SNACK 6 La funzione createSlug lancia un errore se il titolo è vuoto o non valido
-function createSlugTitle(){
-    
+function createSlugTitle(titolo) {
+    if (!titolo || typeof titolo !== 'string' || titolo.trim().length === 0) {
+        throw new Error("Il titolo è vuoto o non valido");
+    }
+
+    return titolo.toLowerCase().split(' ').join('-');
 }
+
+// SNACK 7 La funzione findPostById restituisce il post corretto dato l’array di post e l’id
 
 module.exports = {
     dividi,
@@ -51,5 +57,6 @@ module.exports = {
     createSlug,
     average,
     createSlugSpace,
-    isPalindrome
+    isPalindrome,
+    createSlugTitle
 }
