@@ -50,6 +50,10 @@ function createSlugTitle(titolo) {
 }
 
 // SNACK 7 La funzione findPostById restituisce il post corretto dato l’array di post e l’id
+function findPostById(postArray, id) {
+    return postArray.find(post => post.id === id);
+}
+
 
 module.exports = {
     dividi,
@@ -58,5 +62,6 @@ module.exports = {
     average,
     createSlugSpace,
     isPalindrome,
-    createSlugTitle
+    createSlugTitle,
+    findPostById
 }
