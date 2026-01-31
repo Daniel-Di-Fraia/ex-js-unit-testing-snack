@@ -1,4 +1,4 @@
-const { dividi, getInitials, createSlug, average, createSlugSpace } = require("./test-vari.js");
+const { dividi, getInitials, createSlug, average, createSlugSpace, isPalindrome } = require("./test-vari.js");
 
 //prva jest da lezione
 test('la funzione "dividi" restituisce il quoziente tra 2 numeri', ()=> {
@@ -24,3 +24,11 @@ test("La funzione 'average' calcola la media aritmetica di un array di numeri", 
 test("La funzione createSlug sostituisce gli spazi con -", () => {
     expect(createSlugSpace("test di prova")).toBe("test-di-prova");
   });
+
+//SNACK 5
+test("La funzione isPalindrome verifica se una stringa è un palindromo", () => {
+  expect(isPalindrome("anna")).toBe(true);
+  expect(isPalindrome("ciao")).toBe(false);
+})
+
+// SNACK 6

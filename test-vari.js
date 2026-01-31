@@ -25,9 +25,24 @@ function average(numbers) {
     return sum / numbers.length;
 }
 
-// SNACK 4
+// SNACK 4 La funzione createSlug sostituisce gli spazi con -
 function createSlugSpace(stringa) {
     return stringa.toLowerCase().trim().replace(/\s+/g, "-");
+}
+
+//SNACK 5 La funzione isPalindrome verifica se una stringa è un palindromo
+function isPalindrome(stringa){
+    if(stringa.split('').reverse().join('') === stringa){
+        return true;
+    } else {
+        return false;
+    }
+    
+}
+
+// SNACK 6 La funzione createSlug lancia un errore se il titolo è vuoto o non valido
+function createSlugTitle(){
+    
 }
 
 module.exports = {
@@ -35,5 +50,6 @@ module.exports = {
     getInitials,
     createSlug,
     average,
-    createSlugSpace
+    createSlugSpace,
+    isPalindrome
 }
